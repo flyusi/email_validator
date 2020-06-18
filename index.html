@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>app Занятие 8</title>
+</head>
+<body>
+    <!-- меню навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Виталий
+            <!-- <img src="./img/V.png" class="navbar-brand" width="60" height="50" alt=""> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Мои работы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Галерея</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Выпадающее меню
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Первый пункт</a>
+                        <a class="dropdown-item" href="#">Второй пункт</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Третий пункт</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Введите текст" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+            </form>
+        </div>
+    </nav>
+    <!-- карускель -->
+    <!-- <div class="container-fluid carouselPadding-0">
+        <div class="row">
+            <div class="col"> -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0 " class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1 "></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2 "></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3 "></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4 "></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="./img/slide1.jpg" alt="Первый слайд">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h4 class="slideColor">Первый слайд</h4>
+                                <p>Описание слайда</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./img/slide2.jpg" alt="Второй слайд">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h4 class="slideColor">Второй слайд</h4>
+                                <p>Описание слайда</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./img/slide3.jpg" alt="Третий слайд">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h4 class="slideColor">Третий слайд</h4>
+                                <p>Описание слайда</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./img/slide4.jpg" alt="Четвертый слайд">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h4 class="slideColor">Четвертый слайд</h4>
+                                <p>Описание слайда</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./img/slide5.jpg" alt="Пятый слайд">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h4 class="slideColor">Пятый слайд</h4>
+                                <p>Описание слайда</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Предыдущий слайд</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Следующий слайд</span>
+                    </a>
+                </div>
+            <!-- </div>
+        </div>
+    </div> -->
+    <!-- Картинки -->
+    <div class="container">
+        <div class="row">
+            <div class="col p-0">
+                <div style="width: 16rem;">
+                    <img src="./img/service-first.png" class="card-img-top imgHW" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Responsive Layout</h5>
+                        <p class="card-text">Sprint is free CSS template based on HTML5 and Bootstrap. You can feel
+                            free to download, modify and use this for your website.</p>
+                        <a href="#" class="btn btn-primary">Полностью</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-0">
+                <div style="width: 16rem;">
+                    <img src="./img/service-second.png" class="card-img-top imgHW" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobile Friendly</h5>
+                        <p class="card-text">You may want to visit Too CSS blog to see latest collections of free CSS
+                            templates for your websites. Etiam porttitor nibh et felis molestie fermentum.</p>
+                        <a href="#" class="btn btn-primary">Полностью</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-0">
+                <div style="width: 16rem;">
+                    <img src="./img/service-third.png" class="card-img-top imgHW" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Highest Standard</h5>
+                        <p class="card-text">Phasellus mauris risus, sodales vitae finibus at, auctor et augue. Fusce
+                            est neque, ornare sit amet fringilla eget, tincidunt vel arcu.</p>
+                        <a href="#" class="btn btn-primary">Полностью</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-0">
+                <div style="width: 16rem;">
+                    <img src="./img/service-fourth.png" class="card-img-top imgHW" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Quick Support</h5>
+                        <p class="card-text">Ut congue interdum pharetra facilisi. Aenean consectetur pellentesque
+                            mauris nec ornare. Nam tortor justo, rutrum ut condimentum.</p>
+                        <a href="#" class="btn btn-primary">Полностью</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Начало футера -->
+    <!-- <footer class="page-footer font-small special-color-dark pt-4 ">
+        <div class="footer-copyright text-center py-3 ">© 2020 Copyright:
+            <a href="# ">app Задание 8</a>
+        </div>
+    </footer> -->
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
