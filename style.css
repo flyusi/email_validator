@@ -1,31 +1,86 @@
-     .carousel-indicators li {
-         background-color: rgba(210, 16, 235, 0.5);
-     }
-     
-     .carousel-indicators .active {
-         background-color: #fff;
-     }
-     
-     .carouselPadding-0 {
-         padding: 0;
-     }
-     
-     .carousel-control-next-icon,
-     .carousel-control-prev-icon {
-         height: 50px;
-         width: 50px;
-     }
-     
-     .slideColor {
-         color: rgba(14, 204, 7, 0.966);
-     }
-     
-     .imgHW {
-         width: 100px;
-         height: 113px;
-     }
-     
-     .p-0 {
-         padding: 100px;
-         margin: 20px 70px;
-     }
+/* цвет индикаторов слада */
+.carousel-indicators li {
+    /* background-color: rgba(210, 16, 235, 0.5); */
+    background-color: #343a40;
+}
+/* цвет активного индикатора слайдов */
+.carousel-indicators .active {
+    background-color: #fff;
+}
+/* убрать границы карусели */
+.carouselPadding-0 {
+    padding: 0;
+}
+/* размер переключателей карусели */
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    height: 50px;
+    width: 50px;
+}
+/* текст описания слайда */
+.slideColor {
+    /* color: rgba(14, 204, 7, 0.966); */
+    font: 40px "Open Sans", Arial, sans-serif;
+    font-weight: 700;
+    color: #0029f3;
+}
+/* отступ карточек от карусели */
+.cardPadding{
+    padding-top: 50px;
+}
+/* внешний вид карточек */
+.cardStyle {
+    font: 13px/21px "Open Sans", Arial, sans-serif;
+    color: #838383;
+    text-align: center;
+    align-items: center;
+}
+/* размер картинки в карточке */
+.card-img-top {
+    width: 100px;
+    height: 113px;
+}
+/* цвет заголовка секции */
+.section-title {
+    border-top: 1px solid #e1e6e9;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: #444444;
+}
+/* размер секций продукции */
+.product{
+    margin-bottom: 30px;
+    width: 100%;
+    height: 100%;
+}
+/* Размер картинки продукции */   
+.imgProduct{
+    height: 263px;
+    width: 263px;
+}
+/* заголовок продукции */
+.textProduct{
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #444444;
+    font-size: 24px;
+}
+/* цена продукции */
+.textPrice{
+    font-weight: 700;
+    color: #26b864;
+    font-size: 14px;
+}
+/* текст описания сексии */
+.section-text{
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #444444;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+/* футер */
+.footer{
+    margin-top: 80px;
+    background-color: #343a40;
+    color: #fff;
+}

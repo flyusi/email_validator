@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <title>app Занятие 8</title>
 </head>
@@ -11,7 +12,7 @@
     <!-- меню навигация -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Виталий
-            <!-- <img src="./img/V.png" class="navbar-brand" width="60" height="50" alt=""> -->
+            <!--место логотипа(не подобрал картинку) <img src="./img/V.png" class="navbar-brand" width="60" height="50" alt=""> -->
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,123 +49,294 @@
         </div>
     </nav>
     <!-- карускель -->
-    <!-- <div class="container-fluid carouselPadding-0">
-        <div class="row">
-            <div class="col"> -->
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0 " class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1 "></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2 "></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3 "></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="4 "></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="./img/slide1.jpg" alt="Первый слайд">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h4 class="slideColor">Первый слайд</h4>
-                                <p>Описание слайда</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="./img/slide2.jpg" alt="Второй слайд">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h4 class="slideColor">Второй слайд</h4>
-                                <p>Описание слайда</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="./img/slide3.jpg" alt="Третий слайд">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h4 class="slideColor">Третий слайд</h4>
-                                <p>Описание слайда</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="./img/slide4.jpg" alt="Четвертый слайд">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h4 class="slideColor">Четвертый слайд</h4>
-                                <p>Описание слайда</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="./img/slide5.jpg" alt="Пятый слайд">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h4 class="slideColor">Пятый слайд</h4>
-                                <p>Описание слайда</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Предыдущий слайд</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Следующий слайд</span>
-                    </a>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0 " class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1 "></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2 "></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3 "></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4 "></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="./img/slide1.jpg" alt="Первый слайд">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="slideColor">Первый слайд</h4>
+                    <p>Описание слайда</p>
                 </div>
-            <!-- </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./img/slide2.jpg" alt="Второй слайд">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="slideColor">Второй слайд</h4>
+                    <p>Описание слайда</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./img/slide3.jpg" alt="Третий слайд">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="slideColor">Третий слайд</h4>
+                    <p>Описание слайда</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./img/slide4.jpg" alt="Четвертый слайд">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="slideColor">Четвертый слайд</h4>
+                    <p>Описание слайда</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./img/slide5.jpg" alt="Пятый слайд">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="slideColor">Пятый слайд</h4>
+                    <p>Описание слайда</p>
+                </div>
+            </div>
         </div>
-    </div> -->
-    <!-- Картинки -->
-    <div class="container">
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Предыдущий слайд</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Следующий слайд</span>
+        </a>
+    </div>
+    <!-- Карточки -->
+    <div class="container cardPadding">
         <div class="row">
-            <div class="col p-0">
-                <div style="width: 16rem;">
-                    <img src="./img/service-first.png" class="card-img-top imgHW" alt="...">
+            <div class="col-md-3 col-sm-6 cardStyle">
+                <div style="width: 15rem;">
+                    <img src="./img/service-first.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Responsive Layout</h5>
                         <p class="card-text">Sprint is free CSS template based on HTML5 and Bootstrap. You can feel
                             free to download, modify and use this for your website.</p>
-                        <a href="#" class="btn btn-primary">Полностью</a>
                     </div>
                 </div>
             </div>
-            <div class="col p-0">
-                <div style="width: 16rem;">
-                    <img src="./img/service-second.png" class="card-img-top imgHW" alt="...">
+            <div class="col-md-3 col-sm-6 cardStyle">
+                <div style="width: 15rem;">
+                    <img src="./img/service-second.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Mobile Friendly</h5>
                         <p class="card-text">You may want to visit Too CSS blog to see latest collections of free CSS
                             templates for your websites. Etiam porttitor nibh et felis molestie fermentum.</p>
-                        <a href="#" class="btn btn-primary">Полностью</a>
                     </div>
                 </div>
             </div>
-            <div class="col p-0">
-                <div style="width: 16rem;">
-                    <img src="./img/service-third.png" class="card-img-top imgHW" alt="...">
+            <div class="col-md-3 col-sm-6 cardStyle">
+                <div style="width: 15rem;">
+                    <img src="./img/service-third.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Highest Standard</h5>
                         <p class="card-text">Phasellus mauris risus, sodales vitae finibus at, auctor et augue. Fusce
                             est neque, ornare sit amet fringilla eget, tincidunt vel arcu.</p>
-                        <a href="#" class="btn btn-primary">Полностью</a>
                     </div>
                 </div>
             </div>
-            <div class="col p-0">
-                <div style="width: 16rem;">
-                    <img src="./img/service-fourth.png" class="card-img-top imgHW" alt="...">
+            <div class="col-md-3 col-sm-6 cardStyle">
+                <div style="width: 15rem;">
+                    <img src="./img/service-fourth.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Quick Support</h5>
                         <p class="card-text">Ut congue interdum pharetra facilisi. Aenean consectetur pellentesque
                             mauris nec ornare. Nam tortor justo, rutrum ut condimentum.</p>
-                        <a href="#" class="btn btn-primary">Полностью</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- секция Продукции -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="section-title">ПРОДУКЦИЯ</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="product">
+                    <div>
+                        <img src="./img/products/product1.jpg" class="imgProduct" alt="">
+                    </div>
+                    <h3 class="textProduct">Nunc Consectetur</h3>
+                    <span>
+                        <em>Price:</em>
+                        <em class="textPrice">$170</em>
+                        <p><a href="#" class="btn btn-primary">Купить</a></p>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product">
+                    <div>
+                        <img src="./img/products/product2.jpg" class="imgProduct" alt="">
+                    </div>
+                    <h3 class="textProduct">Donec Vitae Massa</h3>
+                    <span>
+                        <em>Price:</em>
+                        <em class="textPrice">$280</em>
+                        <p><a href="#" class="btn btn-primary">Купить</a></p>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product">
+                    <div>
+                        <img src="./img/products/product3.jpg" class="imgProduct" alt="">
+                    </div>
+                    <h3 class="textProduct">Fusce Dignissim Neque</h3>
+                    <span>
+                        <em>Price:</em>
+                        <em class="textPrice">$370</em>
+                        <p><a href="#" class="btn btn-primary">Купить</a></p>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product">
+                    <div>
+                        <img src="./img/products/product4.jpg" class="imgProduct" alt="">
+                    </div>
+                    <h3 class="textProduct">Mauris Adipiscing Enim</h3>
+                    <span>
+                        <em>Price:</em>
+                        <em class="textPrice">$350</em>
+                        <p><a href="#" class="btn btn-primary">Купить</a></p>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product">
+                    <div>
+                        <img src="./img/products/product5.jpg" class="imgProduct" alt="">
+                    </div>
+                    <h3 class="textProduct">Quisque Tincidunt</h3>
+                    <span>
+                        <em>Price:</em>
+                        <em class="textPrice">$360</em>
+                        <p><a href="#" class="btn btn-primary">Купить</a></p>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product">
+                    <div>
+                        <img src="./img/products/product6.jpg" class="imgProduct" alt="">
+                    </div>
+                    <h3 class="textProduct">Aliquam Malesuada</h3>
+                    <span>
+                        <em>Price:</em>
+                        <em class="textPrice">$320</em>
+                        <p><a href="#" class="btn btn-primary">Купить</a></p>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product">
+                    <div>
+                        <img src="./img/products/product7.jpg" class="imgProduct" alt="">
+                    </div>
+                    <h3 class="textProduct">Sed Eleifend Tortor</h3>
+                    <span>
+                        <em>Price:</em>
+                        <em class="textPrice">$450</em>
+                        <p><a href="#" class="btn btn-primary">Купить</a></p>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product">
+                    <div>
+                        <img src="./img/products/product8.jpg" class="imgProduct" alt="">
+                    </div>
+                    <h3 class="textProduct">Integer tincidunt</h3>
+                    <span>
+                        <em>Price:</em>
+                        <em class="textPrice">$680</em>
+                        <p><a href="#" class="btn btn-primary">Купить</a></p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Секция контакты -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="section-title">КОНТАКТЫ</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <p class="section-text">Обратная форма сязи и карта города</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- карта гугл -->
+            <div class="col-md-6 col-sm-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34237.37782275726!2d75.4444827979007!3d63.19258216135913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x436fa2ce334363b7%3A0xff8a2e7f814d6722!2z0J3QvtGP0LHRgNGM0YHQuiwg0K_QvNCw0LvQvi3QndC10L3QtdGG0LrQuNC5INCw0LLRgtC-0L3QvtC80L3Ri9C5INC-0LrRgNGD0LM!5e0!3m2!1sru!2sru!4v1592478840125!5m2!1sru!2sru"
+                    width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0">
+                </iframe>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">@example.com</span>
+                    </div>
+                </div>
+                <label for="basic-url">Ссылка на продукцию</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                    </div>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Введите сообщение</span>
+                    </div>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Начало футера -->
-    <!-- <footer class="page-footer font-small special-color-dark pt-4 ">
-        <div class="footer-copyright text-center py-3 ">© 2020 Copyright:
+    <footer class="footer">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
             <a href="# ">app Задание 8</a>
         </div>
-    </footer> -->
+    </footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </html>
