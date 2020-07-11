@@ -211,7 +211,7 @@ function initialApp() {
 
     profileForm.style.display = "none";
 
-    changeNavbarContent('Настройки');
+    changeNavbarContent('Задачи');
     changeProfileContent(user.name, user.description);
     renderContacts(contacts);
     renderList(list);
