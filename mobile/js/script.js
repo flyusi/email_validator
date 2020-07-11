@@ -26,6 +26,7 @@ const taskList = document.getElementById('task-list');
 const searchListForm = document.getElementById('list-search-form');
 const btnAddList = document.getElementById('btn-add-list');
 const addListForm = document.getElementById('add-list-form');
+const editListForm = document.getElementById('edit-list-form');
 
 // SETTINGS
 const btnClearStore = document.getElementById('btn-clear-store');
@@ -65,31 +66,102 @@ function renderContacts(contacts) {
 
 
 let list = [
-    { nameTask: "сходить в магазин", task: "dfdf" },
-    { nameTask: "Оплатить счет", task: "dfgdfdf" },
-    { nameTask: "Позвонить по обьявлению", task: "dfdfdfdf" }
+    // { nameTask: "сходить в магазин", task: "dfdf" },
+    // { nameTask: "Оплатить счет", task: "dfgdfdf" },
+    // { nameTask: "Позвонить по обьявлению", task: "dfdfdfdf" }
 ];
 
-function renderList(list) {
-    taskList.innerHTML = '';
-    for (let i = 0; i < list.length; i++) {
-        const currentList = list[i];
-        taskList.innerHTML += createListItem(currentList);
-        function createListItem(list) {
-            return `
-        <li class="list-group-item d-flex justify-content-between align-items-centr">
-        ${list.nameTask}
-        <div>
-            <small>${list.task}</small>
-        </div>
-        </div>
-        <button class="btn dl" data-i="${i}">х</button>
-        </div>
-    </li>
-    `
-        }
+//занесение первоначальных данных в localStorage
+window.onload = function(){
+    listed = JSON.parse(localStorage.getItem('list'));
+    if(listed){
+        
+    }else{
+    localStorage.setItem('list', JSON.stringify(list));  
+    location.reload(); 
     }
-}
+};
+
+//редактрование задачи
+const btnEditTaskListItem = () => {
+    btnEdit = $('.btn-edit');
+    btnEdit.click((event) => {
+        event.preventDefault();
+        const target = $(event.currentTarget);
+        let k = (target.attr('data-in'));
+        newList = JSON.parse(localStorage.getItem('list'));
+        editListForm['nameTask'].value = newList[k].nameTask;
+        editListForm['task'].value = newList[k].task;
+        editListForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            nameTask = editListForm['nameTask'].value;
+            task = editListForm['task'].value;
+            newList.splice(k, 1, { nameTask, task });
+            localStorage.setItem('list', JSON.stringify(newList));
+            renderList(newList);
+            addListForm['nameTask'].value = '';
+            addListForm['task'].value = '';
+            console.log('1');
+        });
+    });
+};
+
+//удаление задачи
+const btnDelTaskListItem = () => {
+    btnDel = $('.dl');
+    btnDel.click((event) => {
+        event.preventDefault();
+        const target = $(event.currentTarget);
+        let k = (target.attr('data-i'));
+        newList = JSON.parse(localStorage.getItem('list'));
+        newList.splice(k, 1);
+        localStorage.setItem('list', JSON.stringify(newList));
+        renderList(newList);
+    });
+};
+
+//второй способ
+// $('.dl').on("click", function(event) {
+//     event.preventDefault();
+//     const target = $(event.currentTarget);
+//     let k = (target.attr('data-i'));
+//     let list = JSON.parse(localStorage.getItem('list'));
+//             list.splice(k, 1);
+//             renderList(list);
+//             localStorage.setItem('list', JSON.stringify(list));
+// })
+
+function renderList(newList) {
+            taskList.innerHTML = '';
+            newList = JSON.parse(localStorage.getItem('list'));
+                for (let i = 0; i < newList.length; i++) {
+                    const currentList = newList[i];
+                    taskList.innerHTML += createListItem(currentList);
+                    function createListItem(newList) {
+                        return `
+                    <li class="list-group-item d-flex justify-content-between align-items-centr">
+                    ${newList.nameTask}
+                    <div>
+                        <small>${newList.task}</small>
+                    </div>
+                    </div>
+                    <button class="btn dl" data-i="${i}">х</button>
+                    </div>
+                    <div>
+                    <button class="btn-edit" data-in="${i}" data-toggle="modal" data-target="#modal-edit-list">
+                        <svg class="bi bi-plus" width="1em" height="1em" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
+                        <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
+                        </svg>
+                    </button>
+                    </div>
+                </li>
+                `
+                    }
+                }   
+    btnDelTaskListItem();
+    btnEditTaskListItem();
+    }
 
 function changeNavbarContent(value) {
     navbaContent.innerText = value;
@@ -101,6 +173,7 @@ function changeProfileContent(name, description) {
 }
 
 function initialApp() {
+
     const savedName = localStorage.getItem('name');
     const savedDescription = localStorage.getItem('description');
     const savedContacts = localStorage.getItem('contacts');
@@ -217,6 +290,7 @@ profileForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     // Сохраняем изменные данные
+    // F12 -> Application -> storage
     localStorage.setItem('name', profileForm['name'].value);
     localStorage.setItem('description', profileForm['description'].value);
 
@@ -270,40 +344,16 @@ addListForm.addEventListener('submit', function (event) {
 
     const nameTask = addListForm['nameTask'].value;
     const task = addListForm['task'].value;
-
+    newList = JSON.parse(localStorage.getItem('list'));
     if (nameTask.length && task.length) {
-        list.unshift({ nameTask, task });
-        localStorage.setItem('list', JSON.stringify(list));
-        renderList(list);
+        newList.unshift({ nameTask, task });
+        localStorage.setItem('list', JSON.stringify(newList));
+        renderList(newList);
 
         addListForm['nameTask'].value = '';
         addListForm['task'].value = '';
     }
-
 })
-
-btnDel = $('.dl');
-
-btnDel.click((event) => {
-    event.preventDefault();
-    const target = $(event.currentTarget);
-    let k = (target.attr('data-i'));
-    let list = JSON.parse(localStorage.getItem('list'));
-            list.splice(k, 1);
-            btnDel.splice(k,1);
-            renderList(list);
-            localStorage.setItem('list', JSON.stringify(list));
-})
-
-// $('.dl').on("click", function(event) {
-//     event.preventDefault();
-//     const target = $(event.currentTarget);
-//     let k = (target.attr('data-i'));
-//     let list = JSON.parse(localStorage.getItem('list'));
-//             list.splice(k, 1);
-//             renderList(list);
-//             localStorage.setItem('list', JSON.stringify(list));
-// })
 
 btnClearStore.addEventListener('click', function () {
     if (localStorage.length > 0) {
@@ -311,7 +361,10 @@ btnClearStore.addEventListener('click', function () {
 
         if (userAnswer) {
             localStorage.clear();
-        }
+            window.onload();
+            renderList(newList);
+            renderContacts(contacts);   
+            }
     }
 })
 
