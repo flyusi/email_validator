@@ -360,7 +360,17 @@ btnClearStore.addEventListener('click', function () {
 
         if (userAnswer) {
             localStorage.clear();
-            window.onload();
+            const clearStor = () =>{
+                listed = JSON.parse(localStorage.getItem('list'));
+                if(listed){
+                    
+                }else{
+                localStorage.setItem('list', JSON.stringify(list));  
+                location.reload(); 
+                }
+            };
+            clearStor();
+            newList = JSON.parse(localStorage.getItem('list'));
             renderList(newList);
             renderContacts(contacts);   
             }
