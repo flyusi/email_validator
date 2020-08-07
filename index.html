@@ -15,6 +15,16 @@
             <div class="form-group">
                 <textarea type="text" class="form-control" name="textValue" placeholder="Введите строку:" autocomplete="off" cols="20" rows="2"></textarea>
             </div>
+            <select id="selectCript" class="form-select form-select-sm" aria-label="Default select example">
+                <option selected>Выберите способ шифрования</option>
+                <option value="1">Base64</option>
+                <option value="2">MD5</option>
+                <option value="3">SHA1</option>
+                <option value="3">SHA224</option>
+                <option value="3">SHA256</option>
+                <option value="3">SHA384</option>
+                <option value="3">SHA512</option>
+              </select>
             <button type="submit" class="btn btn-primary" id="btnCript">Зашифровать</button>
             <div class="form-group">
                 <textarea type="text" class="form-control" name="textCript" placeholder="Введите строку:" autocomplete="off" cols="20" rows="2"></textarea>
