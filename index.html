@@ -11,36 +11,14 @@
 
 <body>
     <div>
-        <form id="cript">
-            <div>
-                <textarea type="text" class="form-control" name="textValue" placeholder="Введите строку:" autocomplete="off" cols="20" rows="2"></textarea>
-            </div>
-            <select id="selectCript" class="form-select form-select-sm" aria-label="Default select example">
-                <option selected>Выберите способ шифрования</option>
-                <option value="1">Base64</option>
-                <option value="2">MD5</option>
-                <option value="3">SHA1</option>
-                <option value="3">SHA224</option>
-                <option value="3">SHA256</option>
-                <option value="3">SHA384</option>
-                <option value="3">SHA512</option>
-              </select>
-            <button type="submit" class="btn btn-primary" id="btnCript">Зашифровать</button>
-            <div>
-                <textarea type="text" class="form-control" name="textCript" placeholder="Введите строку:" autocomplete="off" cols="20" rows="2"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" id="btnEncript">Расшифровать</button>
-            <div>
-                <textarea type="text" class="form-control" name="textEncript" placeholder="Результат:" autocomplete="off" cols="40" rows="5"></textarea>
-            </div>
-        </form>
-        <form id="email" name="form" method="post" onSubmit="return ValidateEmail()">    
-            Введите Email адрес для проверки : <input type="text" name="email" size="30"><br>    
-            <input class="btn btn-primary" type="submit" name="Submit" value="Submit">    
+            <form id="email" name="form" method="post" onSubmit="return ValidateEmail()">    
+                Введите Email адрес для проверки : 
+                <input type="email" name="email" required><br>    
+                <input class="btn btn-primary" type="submit" name="Submit" value="Submit">    
             </form>
     </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
 <script src="./script.js"></script>
 </html>
