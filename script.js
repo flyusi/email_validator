@@ -12,7 +12,7 @@ function checkEmail(email) {
     var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (email.match(mailFormat)){
-        alert("Формат адреса верный"); // можно будет убрать данное сообщение
+        // alert("Формат адреса верный"); // можно будет убрать данное сообщение
         return true;
     }
     return false;
@@ -23,9 +23,25 @@ function checkMailServer(email){
     // проверка почтового сервера DNS-запросом на https://dns.google.com/
     var at = email.indexOf('@');
     var mailDomain = email.slice(at + 1);
-    var request = 'https://dns.google.com/resolve?name='+mailDomain+'&type=MX'
     // отправить запрос, если есть нужный ответ, то сервер существует, и проверка пройдена
-    // return true;
+    var invocation = new XMLHttpRequest();
+    var url = 'https://dns.google.com/resolve?name='+mailDomain+'&type=MX';
+
+    invocation.open('GET', url);
+    invocation.responseType = 'json';
+    invocation.onload = () => {
+        console.log(invocation.response);
+        let ourAnswer = invocation.response;
+        // этот код выполняется позже, нужны промисы....
+    }
+    invocation.send();
+    // console.log(invocation.response);
+    if("Answer" in  ourAnswer){
+        return true;
+    }else{
+        return false;
+    }
+        
 }
 
 function checkRecipient(){
@@ -40,11 +56,13 @@ function validateEmail(){
         // тогда проверяем доступность сервера
         if(checkMailServer(emailID.value) === true){
             // тогда проверяем наличие ящика
-            if(checkRecipient() === true){
-                alert("Указанный почтовый ящик существует. Возможно.");
-            }else{
-                alert("Указанного получателя нет на данном почтовом сервере.")
-            }
+            // if(checkRecipient() === true){
+            //     alert("Указанный почтовый ящик существует. Возможно.");
+            // }else{
+            //     alert("Указанного получателя нет на данном почтовом сервере.")
+            // }
+            alert("Указанный почтовый сервер доступен. Такой почтовый ящик существует. Возможно.");
+            console.log('everything is OK')
         }else{
             emailID.value=""
             alert("Указанный почтовый сервер недоступен");
@@ -58,3 +76,4 @@ function validateEmail(){
         // return false
     }
 }
+
