@@ -78,8 +78,30 @@ btnEncript.addEventListener('click', function(event) {
     }
 });
 
-//3 строчки ниже зашифровывают в md5 то что вписано в скобочках
-
+//Валидация почты
+function checkEmail(emailId) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailId)){
+    alert("Вы ввели верный адрес");
+    return true;
+    }    
+    return false;
+    }
+    function ValidateEmail(){
+        var emailID=document.form.email;
+        if ((emailID.value==null)||(emailID.value=="")){
+            alert("Пожалуйста введите адрес")
+            emailID.focus()
+            return false
+        }
+        if (checkEmail(emailID.value)==false){
+            emailID.value=""
+            alert("Введенный адрес неверный");
+            emailID.focus()
+            return false
+        }
+            // alert('valid');
+            // return true
+     }
 
 // var base64Data = '0J/RgNC40LLQtdGC'; //Привет
 // var base64Rejex = /^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)$/;
