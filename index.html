@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>EmailValidation</title>
 </head>
 
 <body>
     <div>
-            <form id="email" name="form" method="post" onSubmit="return ValidateEmail()">    
+            <form id="email" name="form" method="post" onSubmit="return validateEmail()">    
                 Введите Email адрес для проверки : 
-                <input type="email" name="email" required><br>    
-                <input class="btn btn-primary" type="submit" name="Submit" value="Submit">    
+                <input type="email" name="email" size="32" required><br>    
+                <input class="btn btn-primary" type="submit" name="Submit" value="Проверить">    
             </form>
     </div>
 </body>
