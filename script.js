@@ -19,8 +19,17 @@ function checkEmail(email) {
 }
     
 
-function checkMailServer(){
-    // проверка почтового сервера DNS-запросом
+function checkMailServer(email){
+    // проверка почтового сервера DNS-запросом на https://dns.google.com/
+    var at = email.indexOf('@');
+    var mailDomain = email.slice(at + 1);
+    var request = 'https://dns.google.com/resolve?name='+mailDomain+'&type=MX'
+    // отправить запрос, если есть нужный ответ, то сервер существует, и проверка пройдена
+    // return true;
+}
+
+function checkRecipient(){
+    // проверка существования адресата
 
 }
 
@@ -29,12 +38,12 @@ function validateEmail(){
     
     if (checkEmail(emailID.value) === true){
         // тогда проверяем доступность сервера
-        if(checkMailServer() === true){
+        if(checkMailServer(emailID.value) === true){
             // тогда проверяем наличие ящика
             if(checkRecipient() === true){
-                alert("Указанный почтовый ящик существует");
+                alert("Указанный почтовый ящик существует. Возможно.");
             }else{
-                alert("Указанного получателя нет на данном почтовом сервере")
+                alert("Указанного получателя нет на данном почтовом сервере.")
             }
         }else{
             emailID.value=""
