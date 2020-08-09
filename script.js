@@ -27,21 +27,14 @@ function checkMailServer(email){
     var invocation = new XMLHttpRequest();
     var url = 'https://dns.google.com/resolve?name='+mailDomain+'&type=MX';
 
-    invocation.open('GET', url);
-    invocation.responseType = 'json';
-    invocation.onload = () => {
-        console.log(invocation.response);
-        let ourAnswer = invocation.response;
-        // этот код выполняется позже, нужны промисы....
-    }
-    invocation.send();
-    // console.log(invocation.response);
-    if("Answer" in  ourAnswer){
-        return true;
-    }else{
-        return false;
-    }
-        
+    fetch(url, {method: 'get'})
+        .then((response) => {
+            console.log(response);
+            let ans = response.json();
+            console.log(ans);
+            // надо распарсить объект ответа, и найти, ести в нем ключ "Answer"
+            
+        })
 }
 
 function checkRecipient(){
