@@ -31,9 +31,17 @@ function checkMailServer(email){
         .then((response) => {
             console.log(response);
             let ans = response.json();
-            console.log(ans);
-            // надо распарсить объект ответа, и найти, ести в нем ключ "Answer"
-            
+            return ans;
+        })
+        .then((data) => {
+            let a = data["Answer"];
+            if (a !== undefined){
+                console.log(a);
+                return true;   
+            }else{
+                console.log('there is no a...')
+                return false;
+            }
         })
 }
 
